@@ -1,0 +1,31 @@
+@keyframes bounce {
+  from {
+    transform: translateY(-40px);
+  }
+
+  25% {
+    transform: translateY(40px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  75% {
+    transform: translateY(10px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+
+#div1 {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  top: 100px;
+  left: 100px;
+  background-color: aqua;
+  animation: bounce 2s ease-in-out 1 alternate;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Containers</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        div > div > div {
+            background: #F7941F;
+            padding: 1rem;
+            border: 1px solid white;
+            font-weight: 600;
+            color: white;
+            border-radius: 7px;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- EQUAL WIDTH COLUMNS -->
+
+    <div class="container">
+        
+        <div class="row">
+            <div class="col">
+                1 of 3
+            </div>
+            <div class="col">
+                2 of 3
+            </div>
+            <div class="col">
+                3 of 3
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                1 of 2
+            </div>
+            <div class="col">
+                2 of 2
+            </div>
+        </div>
+    </div>
+
+    <!-- AUTO WIDTH COLUMNS -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                1 of 3
+            </div>
+            <div class="col-auto">
+                Variable width content
+            </div>
+            <div class="col">
+                2 of 3
+            </div>
+        </div>
+    </div>
+
+    <!-- SPECIFIC WIDTH COLUMNS -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-8">Column of 8/12</div>
+            <div class="col-4">Column of 4/12</div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">Column</div>
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">Column</div>
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">Column</div>
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">Column</div>
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">Column</div>
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">Column</div>
+        </div>
+    </div>
+
+    <!-- ROW COLUMNS -->
+
+    <div class="container">
+        <div class="row row-cols-2">
+            <div class="col">column</div>
+            <div class="col">column</div>
+            <div class="col">column</div>
+            <div class="col">column</div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
