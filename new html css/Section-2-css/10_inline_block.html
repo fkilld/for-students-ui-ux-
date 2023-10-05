@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inline & Block Styling</title>
+    </head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        li {
+            /* Changing to inline display puts all list item onto the same line and automatically deletes the listing dots */
+            display: inline
+        }
+
+        li a {
+            padding-right: 20px;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+        }
+
+        .box {
+            /* Some properties require that the container is block. Therefore, changing display from block to inline to present things horizontally may not work. 
+            The solution is inline-block: things still line up horizontally but each of them is still of block display */
+            display: inline-block;
+
+            width: 33%;
+            background: #f4f4f4;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+    </style>
+    <body>
+        <ul>
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">Fashion</a></li>
+        </ul>
+
+        <br><br>
+
+        <img src="./img/leaf.png" alt="My image">
+
+        <br><br>
+
+        <div class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda fuga quae culpa quibusdam totam corrupti vero numquam, doloremque a architecto inventore possimus eum, ducimus corporis quo sit ab, ut earum.</p>
+        </div>
+        <div class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda fuga quae culpa quibusdam totam corrupti vero numquam, doloremque a architecto inventore possimus eum, ducimus corporis quo sit ab, ut earum.</p>
+        </div>
+        <div class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda fuga quae culpa quibusdam totam corrupti vero numquam, doloremque a architecto inventore possimus eum, ducimus corporis quo sit ab, ut earum.</p>
+        </div>
+    </body>
+</html>

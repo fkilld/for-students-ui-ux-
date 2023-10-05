@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Linking in a font from Google Fonts. Specific instructions are available at Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <title>Fonts</title>
+
+        <style>
+            /* When choosing a font, either choose from web safe fonts that always display correctly on the browser or include the font file (same as a CSS file) or link a font from Google Fonts */
+            /* a font family is a font stack including 3 fonts. If the first font is available then it is used; otherwise, move to the next font and so on */
+            body {
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+                line-height: 1.6em;
+            }
+            #welcome p span {
+                font-weight: bold;
+            }
+
+            #about p span {
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="welcome">
+            <h2 class="primary-heading">Welcome</h2>
+            <p>Lorem ipsum dolor sit amet <span>consectetur adipisicing elit. Quos unde voluptatibus aspernatur dolorum!</span> Minus, illo asperiores suscipit aperiam, ipsum consequatur ea sint iusto eaque ducimus id non quas sunt doloremque.</p>
+        </div>
+        <div id="about">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet, <span>consectetur adipisicing elit. Illum, nulla commodi vitae incidunt dolorem</span> debitis unde mollitia? Accusantium consequatur dolore iure ipsam excepturi commodi nulla autem. Beatae similique autem explicabo.</p>
+        </div>
+    </body>
+</html>

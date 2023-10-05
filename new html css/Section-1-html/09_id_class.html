@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Div, Span, id and class</title>
+
+        <style>
+            .card {
+                border: 1px blue solid;
+                background: #f4f4f4;
+                padding: 20px;
+                margin-bottom: 10px;
+            }
+
+            .enhance {
+                background-color: black;
+                color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Classes can repeat for multiple elements. Ids are unique for each element -->
+        <div id="main-header" class="card">
+            <h1>My Website</h1>
+            <p>A site about me</p>
+        </div>
+        <ul id="main-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div id="about" class="card">
+            <h3>About</h3>
+            <!-- divs are block. When you want to be inline, use span -->
+            <p>Lorem ipsum dolor <span class="enhance">sit amet consectetur adipisicing elit. Expedita incidunt nulla sint at harum</span> accusamus illo eligendi iusto, beatae temporibus aut ullam voluptatum velit possimus reiciendis est. Placeat, perferendis iusto?</p>
+        </div>
+        <div id="contact" class="card">
+            <h3>Contact Me</h3>
+            <ul>
+                <li>Address: 50 Main St, Boston MA</li>
+                <li>Phone: (555) 555-5555</li>
+                <li>Email: abc@gmail.com</li>
+            </ul>
+        </div>
+        <div id="footer">
+            <p>Copyright &copy; 2020</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Basics</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .flex-container {
+            /* Automatically arrange all the direct child elements horizontally when we set display to flex */
+            display: flex;
+
+            /* Different options for flex-direction: row, column, row-reverse, column-reverse */
+            flex-direction: row;
+
+            /* When we minimize the window, the flex items will go down to the next line instead of shrinking and staying on the same line */
+            /* flex-wrap: wrap;  */
+        }
+
+        .item {
+            background: #f4f4f4;
+            border: #ccc solid 2px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            
+            /* flex: grow shrink basis */
+            /* flex: 1 means grow=1, shrink=1, basis=0 */
+            flex: 1 0 200px;
+        }
+
+        /* .item-1 { */
+            /* 
+            - The shrinking multiplier of the flex item when the window is resized.  
+            - 0 for no shrinking
+            - 1 for same shrinking multiplier as other flex items
+            - n (> 1) for more shrinking than other flex items
+            - Negative values are invalid
+            */
+            /* flex-shrink: 0; */
+        /* } */
+
+        /* .item-2 { */
+            /* 
+            - The growing multiplier of the flex item
+            - 0 for default size
+            - 1 for expanding to take up the whole window horizontally
+            - n (> 1) for still taking up the whole window horizontally but now n times bigger than flex items having 1.
+            - Negative values are invalid
+            */
+            /* flex-grow: 1; */
+
+            /* 
+            - Set the initial width of the flex items. 
+            - Affect flex items like min-width i.e. stop shrinking when this specified width value is reached. However, if we keep minimize the window, unlike min-width case in which the flex items refuse to shrink and a scroll bar appears, flex items will shrink.
+            - If set to 0 and no other flex attributes are set, flex items will expand evenly to occupy the whole window vertically
+            */
+            /* flex-basis: 0; */
+        /* } */
+
+        /* .item-3 {
+            flex-basis: 0;
+            flex-grow: 2;
+        } */
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="item item-1">
+            <h3>Item 1</h3>
+        </div>
+        <div class="item item-2">
+            <h3>Item 2</h3>
+        </div>
+        <div class="item item-3">
+            <h3>Item 3</h3>
+        </div>
+    </div>
+</body>
+</html>

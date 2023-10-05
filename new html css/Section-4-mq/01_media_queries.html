@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: gray;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1 {
+            display: none;
+        }
+
+        /* Smartphones */
+        /* If the width of the screen is 500px or less, the configurations inside this media query will take effect */
+        /* 
+        - max-width: Applies to widths less than or at most equal to the specified value
+        - min-width: Applies to widths greater than or at least equal to the specified value 
+        */
+        /* "only screen" means the stylings will only apply to screen media type. The default is "all". */
+        @media only screen and (max-width: 500px) {
+            body {
+                background: red;
+            }
+
+            #smartphone h1 {
+                display: block;
+            }
+        }
+        
+        /* Tablet */
+        /* Set both min-width and max-width to apply different stylings for smartphones and tablets */
+        @media(min-width: 501px) and (max-width: 768px) {
+            body {
+                background: blue;
+            }
+
+            #tablet h1 {
+                display: block;
+            }
+        }
+
+        /* Normal (PC) */
+        @media(min-width: 769px) and (max-width: 1200px) {
+            body {
+                background: green;
+            }
+
+            #normal h1 {
+                display: block;
+            }
+        }
+
+        /* Widescreen */
+        @media(min-width: 1201px) {
+            body {
+                background: black;
+            }
+
+            #widescreen h1 {
+                display: block;
+            }
+        }
+
+        /* Landscape */
+        @media(max-height: 500px) {
+            body {
+                background: orange;
+            }
+
+            #landscape h1 {
+                display: block;
+            }
+        }
+    </style>
+    <!-- This stylesheet will only be loaded if the media is a screen and has a width of 768px or less -->
+    <!-- Stylings that are linked in more down below will overwrite the above -->
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="./css/mobile.css">
+</head>
+<body>
+    <div id="widescreen"><h1>Widescreen</h1></div>
+    <div id="normal"><h1>Normal</h1></div>
+    <div id="tablet"><h1>Tablet</h1></div>
+    <div id="smartphone"><h1>Smartphone</h1></div>
+    <div id="landscape"><h1>Landscape</h1></div>
+</body>
+</html>

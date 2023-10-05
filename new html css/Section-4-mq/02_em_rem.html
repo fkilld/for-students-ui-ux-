@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- html is the root element and its default font size is 16px -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em & Rem Units</title>
+    <style>
+        #box-1 {
+            font-size: 20px;
+        }
+
+        #box-1 p {
+            font-size: 1.5em;
+
+            /* If we set the font size for the element itself, 1 em unit will now equal that value and not the font size value of the parent element anymore */
+            padding: 1em;
+        }
+
+        #box-1 ul {
+            /* 
+            - The outer ul will take 1 em = 20px, which is the font size of the parent
+            - The inner ul will take 1 em = 24px, which is 1.2 * 20px, which is the font size of the outer ul
+            */
+            font-size: 1.2em;
+        }
+
+        /* Change the font size of the root element */
+        html {
+            font-size: 10px;
+            /* 62.5% is also same as 10px */
+            /* font-size: 62.5%; */
+        }
+
+        #box-2 h3 {
+            font-size: 2rem;
+        }
+
+        #box-2 p {
+            font-size: 1.6rem;
+            line-height: 1.7rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="box-1">
+        <h3>Box One</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eius cum obcaecati, velit tempora quae incidunt voluptatum mollitia distinctio deleniti.</p>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </li>
+            <li>4</li>
+        </ul>
+    </div>
+    <div id="box-2">
+        <h3>Box Two</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eius cum obcaecati, velit tempora quae incidunt voluptatum mollitia distinctio deleniti.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Extras</title>
+        <style>
+            .hello {
+                /* Properties in specific classes overwrite their counterparts in element tag like h1, p, a, etc. no matter where the class is defined */
+                color: red;
+
+                /* This works but we should avoid. 
+                Negative means moving in the other direction */
+                margin-top: -30px
+            }
+
+            h1 {
+                /* Make the element disappear visually and also out of the flow of all elements */
+                /* display: none */
+
+                /* Make the element visually gone only i.e. it still takes up space and is still in the flow of all elements */
+                /* visibility: hidden; */
+
+                /* Add the flag important prioritize this property setting */
+                color: blue !important;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="hello">Hello World!</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam a, perferendis corrupti, necessitatibus reiciendis veritatis quidem vitae id dolor sint itaque blanditiis deleniti officiis? Ad minima quaerat modi minus tempore.</p>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Basics</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .flex-container {
+            background-color: #f4f4f4;
+            height: 50vh;
+
+            /* Automatically arrange all the direct child elements horizontally when we set display to flex */
+            display: flex;
+
+            /* Different options for flex-direction: row, column, row-reverse, column-reverse */
+            flex-direction: row;
+
+            /* 
+            - Aligning flex items relative to the cross axis of the flex container 
+            - Other options: flex-start, flex-end, baseline, stretch
+            */
+            align-items: center;
+
+            /* 
+            - Aligning flex items relative to the main axis of the flex container
+            - Other options: flex-end, flex-start, space-around, space-between
+            */
+            justify-content: center;
+        }
+
+        .item {
+            background: #f4f4f4;
+            border: #ccc solid 2px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            
+            /* flex: grow shrink basis */
+            /* flex: 1 means grow=1, shrink=1, basis=0 */
+            /* flex: 1; */
+        }
+
+        .item-1 {
+            /* 
+            - Aligning the flex item itself relative to the cross axis 
+            - Overwrites the align-items attribute set in the flex container
+            */
+            align-self: flex-start;
+        }
+
+        .item-3 {
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="item item-1">
+            <h3>Item 1</h3>
+        </div>
+        <div class="item item-2">
+            <h3>Item 2</h3>
+        </div>
+        <div class="item item-3">
+            <h3>Item 3</h3>
+        </div>
+    </div>
+</body>
+</html>

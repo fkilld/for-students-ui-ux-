@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Selectors</title>
+
+
+        <style>
+            /* Element selector */
+            body {
+                background-color: #333;
+            }
+
+            /* Syntax: element#id */
+            /* #green-heading is the same */
+            /* h2#green-heading {
+                color: green;
+            } */
+
+            /* . is the class selector */
+            .primary-heading {
+                color: blue
+            }
+
+            /* # is the id selector */
+            #welcome {
+                background-color: #f4f4f4;
+            }
+
+            /* Multiple selectors */
+            #welcome, #about {
+                border: 1px #ccc solid;
+                padding: 10px;
+                margin-bottom: 5px;
+            }
+
+            /* Nested selector */
+            /* Targetting all the paragraph(s) (p) which is/are inside the element having the specified id */
+            #welcome p {
+                font-size: 20px;
+            }
+
+            #about {
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="welcome">
+            <h2 class="primary-heading">Welcome</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos unde voluptatibus aspernatur dolorum! Minus, illo asperiores suscipit aperiam, ipsum consequatur ea sint iusto eaque ducimus id non quas sunt doloremque.</p>
+        </div>
+        <div id="about">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, nulla commodi vitae incidunt dolorem debitis unde mollitia? Accusantium consequatur dolore iure ipsam excepturi commodi nulla autem. Beatae similique autem explicabo.</p>
+        </div>
+    </body>
+</html>
